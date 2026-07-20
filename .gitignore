@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+research_map/origin_paper.json
+research_map/cinii_probe_result.json
+research_map/cinii_probe_result.raw.txt
+output/
+research_map/output/
+.pytest_cache/
