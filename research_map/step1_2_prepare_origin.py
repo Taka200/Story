@@ -79,7 +79,7 @@ def main() -> None:
     if not fulltext.strip():
         parser.error("論文本文が空です。--file を指定するか、標準入力に貼り付けてください。")
 
-    keywords = text_extract.extract_keywords(fulltext, top_n=args.top_n)
+    keywords = text_extract.extract_keywords(fulltext, title=args.title, top_n=args.top_n)
     authors = [a.strip() for a in args.authors.split(",")] if args.authors else []
 
     origin = {
