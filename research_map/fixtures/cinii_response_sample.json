@@ -1,0 +1,95 @@
+{
+  "opensearch:totalResults": 131,
+  "opensearch:startIndex": 1,
+  "opensearch:itemsPerPage": 3,
+  "items": [
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390001205778650624",
+      "@type": "item",
+      "title": "「権記」所載の一条院出離歌について",
+      "link": {"@id": "https://cir.nii.ac.jp/crid/1390001205778650624"},
+      "dc:creator": ["山本 淳子"],
+      "dc:publisher": "日本文学協会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本文学",
+      "prism:issn": "03869903",
+      "prism:volume": "55",
+      "prism:number": "9",
+      "prism:startingPage": "35",
+      "prism:endingPage": "43",
+      "prism:publicationDate": "2006",
+      "description": "『権記』は一条院が出家後死の床で詠んだ歌を記す。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {"@type": "cir:DOI", "@value": "10.20620/nihonbungaku.55.9_35"},
+        {"@type": "cir:NDL_BIB_ID", "@value": "8090655"},
+        {"@type": "cir:URI", "@value": "http://id.ndl.go.jp/bib/8090655"},
+        {"@type": "cir:URI", "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I8090655"},
+        {"@type": "cir:NAID", "@value": "110009886134"}
+      ],
+      "dc:source": [
+        {"@id": "http://id.ndl.go.jp/bib/8090655"},
+        {"@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I8090655"}
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520302845779517952",
+      "@type": "item",
+      "title": "耕起後圃場の表面画像の凹凸程度からの砕土率推定：深層学習による画像分類の活用",
+      "link": {"@id": "https://cir.nii.ac.jp/crid/1520302845779517952"},
+      "dc:creator": ["今泉 時大", "斎中 節", "浅槻 洋幸"],
+      "dc:publisher": "東京 : 日本土壌肥料学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本土壌肥料学雑誌",
+      "prism:issn": "00290610",
+      "prism:volume": "95",
+      "prism:number": "6",
+      "prism:startingPage": "367",
+      "prism:endingPage": "375",
+      "prism:publicationDate": "2024-12",
+      "dc:identifier": [
+        {"@type": "cir:NDL_BIB_ID", "@value": "033870561"},
+        {"@type": "cir:URI", "@value": "http://id.ndl.go.jp/bib/033870561"},
+        {"@type": "cir:URI", "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I033870561"}
+      ],
+      "dc:subject": [
+        "砕土率", "表面凹凸程度", "深層学習", "畳み込みニューラルネットワーク",
+        "画像分類", "convolutional neural network", "deep learning",
+        "image classification", "pulverized soil rate", "surface soil clod level"
+      ],
+      "dc:source": [
+        {"@id": "http://id.ndl.go.jp/bib/033870561"},
+        {"@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I033870561"}
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1523388080880023808",
+      "@type": "item",
+      "title": "深層学習を用いたクラウド型画像分類システムの開発",
+      "link": {"@id": "https://cir.nii.ac.jp/crid/1523388080880023808"},
+      "dc:creator": ["渡辺 卓深", "岩田 隼一"],
+      "dc:publisher": "各都県 : 岡山県情報技術研究所",
+      "dc:type": "Article",
+      "prism:publicationName": "岡山県情報技術研究所研究報告",
+      "prism:issn": "18828566",
+      "prism:number": "19",
+      "prism:startingPage": "6",
+      "prism:endingPage": "9",
+      "prism:publicationDate": "2017",
+      "description": "コレクション : 国立国会図書館デジタルコレクション",
+      "dc:identifier": [
+        {"@type": "cir:NDL_BIB_ID", "@value": "029220156"},
+        {"@type": "cir:URI", "@value": "http://id.ndl.go.jp/bib/029220156"},
+        {"@type": "cir:URI", "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I029220156"},
+        {"@type": "cir:URI", "@value": "https://dl.ndl.go.jp/pid/11700556"},
+        {"@type": "cir:NAID", "@value": "40021665148"}
+      ],
+      "dc:subject": ["人工知能", "深層学習", "畳み込みニューラルネットワーク", "画像分類", "クラウド"],
+      "dc:source": [
+        {"@id": "http://id.ndl.go.jp/bib/029220156"},
+        {"@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I029220156"},
+        {"@id": "https://dl.ndl.go.jp/pid/11700556"}
+      ]
+    }
+  ]
+}
