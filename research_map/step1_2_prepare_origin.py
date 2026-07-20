@@ -51,8 +51,17 @@ def read_text(file_path: Optional[str]) -> str:
     return sys.stdin.read()
 
 
-def build_search_query(title: str, keywords: list[str], max_keywords: int = 5) -> str:
-    terms = [title] + keywords[:max_keywords]
+def build_search_query(keywords: list[str], max_keywords: int = 3) -> str:
+    """CiNii検索クエリの初期案を組み立てる。
+
+    CiNii ResearchのOpenSearchはスペース区切りの語をAND検索するため、
+    論文タイトル全文＋多数のキーワードを渡すと必須条件が増えすぎて
+    ヒット件数がほぼ0（起点論文自身しか一致しない）になる。
+    そのため、タイトル全文は含めず、キーワードも少数（デフォルト3件）に絞る。
+    実際の検索（Step3）では、これでも件数が少ない場合にさらに語数を
+    減らして自動的に再検索する。
+    """
+    terms = keywords[:max_keywords]
     return " ".join(dict.fromkeys(t for t in terms if t))
 
 
@@ -78,7 +87,7 @@ def main() -> None:
         "authors": authors,
         "year": _parse_year(args.pub_date),
         "keywords": keywords,
-        "search_query": build_search_query(args.title, keywords),
+        "search_query": build_search_query(keywords),
         "fulltext_text": fulltext,
         "fulltext_chars": len(fulltext),
     }

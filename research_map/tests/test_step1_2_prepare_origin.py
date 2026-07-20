@@ -7,10 +7,13 @@ from research_map.step1_2_prepare_origin import build_search_query, main
 
 
 class TestBuildSearchQuery(unittest.TestCase):
-    def test_combines_title_and_keywords_without_duplicates(self):
-        query = build_search_query("画像分類の研究", ["CNN", "画像分類の研究", "深層学習"])
-        self.assertEqual(query.count("画像分類の研究"), 1)
-        self.assertIn("CNN", query)
+    def test_uses_top_keywords_without_title(self):
+        query = build_search_query(["CNN", "画像分類", "深層学習", "転移学習"], max_keywords=3)
+        self.assertEqual(query, "CNN 画像分類 深層学習")
+
+    def test_deduplicates_keywords(self):
+        query = build_search_query(["CNN", "CNN", "画像分類"])
+        self.assertEqual(query.split().count("CNN"), 1)
 
 
 class TestMainEndToEnd(unittest.TestCase):
@@ -44,7 +47,8 @@ class TestMainEndToEnd(unittest.TestCase):
             self.assertEqual(data["authors"], ["著者A", "著者B"])
             self.assertEqual(data["year"], 2020)
             self.assertIn("転移学習", data["keywords"])
-            self.assertIn("テストタイトル", data["search_query"])
+            self.assertIn("転移学習", data["search_query"])
+            self.assertNotIn("テストタイトル", data["search_query"])
 
 
 if __name__ == "__main__":
